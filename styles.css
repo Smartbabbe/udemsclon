@@ -54,8 +54,9 @@ nav ul li a {
 
 /* styling the section */
 section{
-    width: 80%;
-    margin: auto;
+
+    width: 100%;
+    margin: 0 1rem;
 }
 
 /* styling first div */
@@ -514,4 +515,172 @@ footer td a:hover {
     color: white;
     border: 1px solid black;
     padding: 5px;
+}
+
+/* Carousel Section */
+
+.Carousel-container{
+    display: flex;
+    margin-top: 26px;
+
+}
+
+
+
+.image-container1, .image-container2, .image-container3, .image-container4, .image-container5, .image-container6, .image-container7, .image-container8, .image-container9, .image-container10 {
+    width: inherit;
+    height: 135px;
+    background-size: cover;
+}
+
+.image-container1 {
+    background-image: url("1565838_e54e_16.jpg");
+}
+
+.image-container2{
+    background-image: url("2776760_f176_10.jpg");
+
+}
+
+.image-container3 {
+    background-image: url("851712_fc61_6.jpg");
+}
+
+.image-container4 {
+    background-image: url("1362070_b9a1_2.jpg");
+}
+
+.image-container5 {
+    background-image: url("2196488_8fc7_10.jpg");
+}
+
+.image-container6 {
+    background-image: url("2196488_8fc7_10.jpg");
+}
+
+.image-container7{
+    background-image: url("396876_cc92_7.jpg");
+
+}
+
+.image-container8 {
+    background-image: url("2196488_8fc7_10.jpg");
+}
+
+.image-container9 {
+    background-image: url("394676_ce3d_5.jpg");
+}
+
+.image-container10 {
+    background-image: url("482754_7146_6.jpg");
+}
+
+
+.Carousel-container h3 {
+    font-size: 1rem;
+}
+
+.content-container1, .content-container2, .content-container3, .content-container4, .content-container5{
+    width: 250px;
+    margin-left: 1rem;
+}
+
+.content-container1 {
+    margin-left: 1.5rem;
+}
+
+.content-container5{
+    margin-right: 1.5rem; ;
+}
+
+.carousel {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    width: 100%;
+}
+
+.carousel-open:checked + .Carousel-container {
+    position: static;
+    opacity: 100;
+}
+
+.Carousel-container {
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: opacity 0.6s ease-in-out;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.carousel-control {
+    background: rgba(0, 0, 0, 0.28);
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    font-size: 40px;
+    height: 40px;
+    line-height: 35px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    cursor: pointer;
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    text-align: center;
+    width: 40px;
+    z-index: 10;
+}
+
+.carousel-control.prev {
+    left: 2%;
+}
+
+.carousel-control.next {
+    right: 2%;
+}
+
+.carousel-control:hover {
+    background: rgba(0, 0, 0, 0.8);
+    color: #aaaaaa;
+}
+
+#carousel-1:checked ~ .control-1,
+#carousel-2:checked ~ .control-2,
+#carousel-3:checked ~ .control-3 {
+    display: block;
+}
+
+.carousel-indicators {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+}
+
+.carousel-indicators li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.carousel-bullet {
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 35px;
+}
+
+.carousel-bullet:hover {
+    color: #aaaaaa;
+}
+
+#carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+#carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+#carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+    color: #428bca;
 }
